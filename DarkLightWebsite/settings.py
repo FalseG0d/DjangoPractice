@@ -25,7 +25,7 @@ SECRET_KEY = 'kc6j4vw3^lpxhwyc+trp5be3po!*wyy4$i7x@$zqu!e0w&p3mk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['darklightwebsite.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['darklightwebsite.herokuapp.com','127.0.0.1']
 
 
 # Application definition
