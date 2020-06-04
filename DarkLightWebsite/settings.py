@@ -131,5 +131,5 @@ MEDIA_URL='/media/'
 '''
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
-MEDIA_SERVER_URL = 'darklightwebsite.herokuapp.com/'
+MEDIA_SERVER_URL = '/'
 MEDIA_URL = os.path.join(MEDIA_SERVER_URL, 'media/')
