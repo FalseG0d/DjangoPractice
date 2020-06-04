@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kc6j4vw3^lpxhwyc+trp5be3po!*wyy4$i7x@$zqu!e0w&p3mk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['darklightwebsite.herokuapp.com','localhost']
 
 
 # Application definition
