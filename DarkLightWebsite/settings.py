@@ -119,7 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[
@@ -127,5 +126,10 @@ STATICFILES_DIRS=[
 ]
 STATIC_ROOT=os.path.join(BASE_DIR,'assets')
 
+'''
 MEDIA_URL='/media/'
+'''
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+MEDIA_SERVER_URL = 'darklightwebsite.herokuapp.com/'
+MEDIA_URL = os.path.join(MEDIA_SERVER_URL, 'media/')
