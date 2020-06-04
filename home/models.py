@@ -10,10 +10,9 @@ class Slider(models.Model):
         return self.name
 
 
-class Portfolio(models.Model):
-    image=models.ImageField(upload_to='images/portfolio')
+class Services(models.Model):
+    image=models.ImageField(upload_to='images/services')
     name=models.CharField(max_length=20)
-    date=models.DateField()
 
     def __str__(self):
         return self.name
@@ -22,14 +21,16 @@ class About(models.Model):
     logo=models.ImageField(upload_to='images')
     name=models.CharField(max_length=50)
     desc=models.TextField()
-    #color=models.CharField(max_length=50)
+    color=models.CharField(max_length=50)
+    hightlight_color=models.CharField(max_length=50)
+    image=models.ImageField(upload_to='images')
     email=models.EmailField()
     password=models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
 
-class RecentImage(models.Model):
+class GalleryImage(models.Model):
     image=models.ImageField(upload_to='images/recent')
     name=models.CharField(max_length=20)
 

@@ -6,16 +6,16 @@ from .models import *
 def home(request):
 
     sliders=Slider.objects.all()
-    portfolios=Portfolio.objects.all()
+    services=Services.objects.all()
     about=About.objects.all()[0]
     #about.color=str.lower(about.color)
-    recentimages=RecentImage.objects.all()
+    images=GalleryImage.objects.all()
     links=Link.objects.all()
     context={
         'sliders':sliders,
-        'portfolios':portfolios,
+        'services':services,
         'about':about,
-        'recentimages':recentimages,
+        'images':images,
         'links':links,
     }
     return render(request,"index.html",context)

@@ -25,6 +25,38 @@ h6,
     font-family: 'News Cycle', sans-serif;
     /*font-weight:100;*/
     font-weight: 400;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    overflow: auto;
+}
+
+.nav-logo {
+    float: left;
+}
+
+.nav-item {
+    float: right;
+    text-transform: uppercase;
+}
+
+.nav-item a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: black;
+    background-color: red;
 }
 
 body {
@@ -40,7 +72,7 @@ a {
 }
 
 a {
-    color: gold;
+    color: #34c8b2;
 }
 
 a:hover {
@@ -49,17 +81,17 @@ a:hover {
 }
 
 .btn-o {
-    border: 1px solid gold;
+    border: 1px solid #34c8b2;
     /*border-radius*/
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    color: gold;
+    color: #34c8b2;
 }
 
 .btn-o:hover {
     color: white;
-    background: gold;
+    background: #34c8b2;
 }
 
 img {
@@ -67,10 +99,19 @@ img {
     max-height: 100%;
 }
 
+.slider-text {
+    size: 100%;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    width: 100%;
+    left: 10%;
+}
+
 .hexagon {
     width: 100px;
     height: 55px;
-    background: gold;
+    background: black;
     position: relative;
     /*transition*/
     -webkit-transition: all 0.3s;
@@ -88,7 +129,7 @@ img {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 25px solid gold;
+    border-bottom: 25px solid black;
     /*transition*/
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -105,7 +146,7 @@ img {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 25px solid gold;
+    border-top: 25px solid black;
     /*transition*/
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -164,6 +205,25 @@ Navigation
 .nav>li>a:focus {
     background-color: #ec343c;
     color: white;
+}
+
+
+/* ========================================================================== 
+Abouit Us
+========================================================================== */
+
+.col-container {
+    display: table;
+    /* Make the container element behave like a table */
+    width: 100%;
+    align-items: center;
+    /* Set full-width to expand the whole page */
+}
+
+.col {
+    display: table-cell;
+    padding: 5%;
+    /* Make elements inside the container behave like table cells */
 }
 
 
@@ -240,7 +300,7 @@ content-block
 }
 
 .content-block-cyan {
-    background: gold;
+    background: black;
     color: #ECF0F1;
 }
 
@@ -316,7 +376,7 @@ Recent works
 }
 
 .owl-theme .owl-controls .owl-page span {
-    background: gold;
+    background: black;
 }
 
 
@@ -338,6 +398,19 @@ blog
 
 
 /* ========================================================================== 
+Contact Us
+========================================================================== */
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    box-sizing: border-box;
+}
+
+
+/* ========================================================================== 
 Social
 ========================================================================== */
 
@@ -355,13 +428,6 @@ Social
     line-height: 55px;
     position: relative;
     z-index: 1;
-}
-
-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
 }
 
 
