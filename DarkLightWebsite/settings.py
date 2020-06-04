@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kc6j4vw3^lpxhwyc+trp5be3po!*wyy4$i7x@$zqu!e0w&p3mk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False 
 
-ALLOWED_HOSTS = ['darklightwebsite.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -119,17 +119,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
 ]
-STATIC_ROOT=os.path.join(BASE_DIR,'assets')
 
-'''
 MEDIA_URL='/media/'
-'''
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-
-MEDIA_SERVER_URL = '/'
-MEDIA_URL = os.path.join(MEDIA_SERVER_URL, 'media/')
