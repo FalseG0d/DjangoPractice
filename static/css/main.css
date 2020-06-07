@@ -212,18 +212,11 @@ Navigation
 Abouit Us
 ========================================================================== */
 
-.col-container {
-    display: table;
-    /* Make the container element behave like a table */
-    width: 100%;
-    align-items: center;
-    /* Set full-width to expand the whole page */
-}
-
-.col {
-    display: table-cell;
-    padding: 5%;
-    /* Make elements inside the container behave like table cells */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 
