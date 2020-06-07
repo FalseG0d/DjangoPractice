@@ -213,17 +213,12 @@ Abouit Us
 ========================================================================== */
 
 .col-container {
-    display: table;
-    /* Make the container element behave like a table */
-    width: 100%;
-    align-items: center;
-    /* Set full-width to expand the whole page */
+  display: flex;
+  width: 100%;
 }
-
 .col {
-    display: table-cell;
-    padding: 5%;
-    /* Make elements inside the container behave like table cells */
+  flex: 1;
+  padding: 16px;
 }
 
 
@@ -478,4 +473,11 @@ Responsive styles
     #social {
         padding-bottom: 70px;
     }
+}
+
+@media only screen and (max-width: 600px) {
+  .col {
+    display: block;
+    width: 100%;
+  }
 }
