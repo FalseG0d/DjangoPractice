@@ -24,9 +24,9 @@
     <br />
     <br />
     ·
-    <a href="https://github.com/FalseG0d/DjangoPractise/issues">Report Bug</a>
+    <a href="https://github.com/FalseG0d/DjangoPractice/issues">Report Bug</a>
     ·
-    <a href="https://github.com/FalseG0d/DjangoPractise/issues">Request Feature</a>
+    <a href="https://github.com/FalseG0d/DjangoPractice/issues">Request Feature</a>
   </p>
 </p>
 
@@ -51,7 +51,7 @@ Simply Open the App or Feature you wish to learn by selecting a folder of your c
 1. Clone the repo
 
 ```sh
-git clone https://github.com/FalseG0d/DjangoPractise.git
+git clone https://github.com/FalseG0d/DjangoPractice.git
 ```
 
 2. Run the Django App on a Local Machine or a Server.
@@ -97,7 +97,7 @@ git clone https://github.com/FalseG0d/DjangoPractise.git
 2. Clone Repository.
 
 ```sh
-git clone https://github.com/FalseG0d/DjangoPractise.git
+git clone https://github.com/FalseG0d/DjangoPractice.git
 ```
 
 3. Update Packages
@@ -118,7 +118,7 @@ git clone https://github.com/FalseG0d/DjangoPractise.git
 
 Apoorv Garg - [@ApoorvG03132459](https://twitter.com/ApoorvG03132459) - u.garg.10@gmail.com
 
-Project Link: [https://github.com/FalseG0d/DjangoPractise](https://github.com/FalseG0d/DjangoPractise)
+Project Link: [https://github.com/FalseG0d/DjangoPractice](https://github.com/FalseG0d/DjangoPractice)
 
 
 ## Acknowledgement
@@ -128,16 +128,16 @@ Project Link: [https://github.com/FalseG0d/DjangoPractise](https://github.com/Fa
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/FalseG0d/DjangoPractise.svg?style=flat-square
-[contributors-url]: https://github.com/FalseG0d/DjangoPractise/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/FalseG0d/DjangoPractise.svg?style=flat-square
-[forks-url]: https://github.com/FalseG0d/DjangoPractise/network/members
-[stars-shield]: https://img.shields.io/github/stars/FalseG0d/DjangoPractise.svg?style=flat-square
-[stars-url]: https://github.com/FalseG0d/DjangoPractise/stargazers
-[issues-shield]: https://img.shields.io/github/issues/FalseG0d/DjangoPractise.svg?style=flat-square
-[issues-url]: https://github.com/FalseG0d/DjangoPractise/issues
-[license-shield]: https://img.shields.io/github/license/FalseG0d/DjangoPractise.svg?style=flat-square
-[license-url]: https://github.com/FalseG0d/DjangoPractise/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/FalseG0d/DjangoPractice.svg?style=flat-square
+[contributors-url]: https://github.com/FalseG0d/DjangoPractice/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/FalseG0d/DjangoPractice.svg?style=flat-square
+[forks-url]: https://github.com/FalseG0d/DjangoPractice/network/members
+[stars-shield]: https://img.shields.io/github/stars/FalseG0d/DjangoPractice.svg?style=flat-square
+[stars-url]: https://github.com/FalseG0d/DjangoPractice/stargazers
+[issues-shield]: https://img.shields.io/github/issues/FalseG0d/DjangoPractice.svg?style=flat-square
+[issues-url]: https://github.com/FalseG0d/DjangoPractice/issues
+[license-shield]: https://img.shields.io/github/license/FalseG0d/DjangoPractice.svg?style=flat-square
+[license-url]: https://github.com/FalseG0d/DjangoPractice/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/apoorv-garg-137137171/
 [product-screenshot]: images/pexels.jpg
