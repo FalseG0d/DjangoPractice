@@ -1,0 +1,26 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><!--<img src="{% static 'images/logo.jpg' %}">-->Nav</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        {% if request.user.is_staff %}
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Dashboard <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/products">Products</a>
+        </div>
+        {% else %}
+        <li class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'account' %}">Settings</a>
+        </li>
+        {% endif %}
+    </div>
+
+    <div class="navbar-nav">
+        <span class="nav-item nav-link">Hello, {{request.user}}</span>
+        <span><a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a></span>
+    </div>
+</nav>
