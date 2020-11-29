@@ -1,0 +1,13 @@
+{% extends 'home/main.html' %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Register</h1>
+            <form action="" method="POST">
+                {% csrf_token %} {{form.as_p}}
+                <input type="submit" name="Register" id="">
+            </form>
+        </div>
+    </div>
+</div>
+Already a User? <a href="{% url 'login' %}">Login</a> {% endblock %}

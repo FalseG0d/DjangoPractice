@@ -1,0 +1,292 @@
+{% extends 'main.html' %}{% load static %} {% block content %}
+
+
+
+<div class="frame1-container ">
+    <div id="frame1">
+
+        <h1>
+            India's Fastest Growing Legal Company.
+        </h1>
+        <h4>
+            That's one company every 9 minutes.
+        </h4>
+
+        <div class="feature-container">
+            <div class="feature">
+                <div class="image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/icon-lawyers.svg" alt="" width="40px" height="auto" class="homepage-vsleads-icons" src="https://a.vakilsearch.com/live-images/website_revamp/icon-lawyers.svg"></div>
+                <div>
+                    <div class="topic">
+                        <h7>Lawyers</h7>
+                    </div>
+                    <p>
+                        Documents, contracts and advice, done right.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/icon-ca.svg" alt="" width="40px" height="auto" class="homepage-vsleads-icons" src="https://a.vakilsearch.com/live-images/website_revamp/icon-ca.svg"></div>
+                <div>
+                    <div class="topic">
+                        <h7>Chartered Accountants</h7>
+                    </div>
+                    <p>
+                        Your books are in safe hands.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/icon-cs.svg" alt="" width="40px" height="auto" class="homepage-vsleads-icons" src="https://a.vakilsearch.com/live-images/website_revamp/icon-cs.svg"></div>
+                <div>
+                    <div class="topic">
+                        <h7>Company Secretaries</h7>
+                    </div>
+                    <p>
+                        Your business' compliance checklist, completed.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div id="ad1" class="carousel slide " data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block size" src="{% static 'images/WhatsApp%20Image%202020-05-16%20at%2011.55.43%20PM.jpeg' %}" alt="First slide">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="line" class="row"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 company-container">
+            <h3>{{count}} clients so far</h3>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container bg-dark text-dark">
+    <h2 class="text-center text-white" style="padding: 1% 0 0 0;">Our Services</h2>
+    <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+        {% for type in types %} {% if type.visible %} {% if type.first %}
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="{{type.name}}-tab" data-toggle="tab" href="#service1{{type.id}}" role="tab" aria-controls="service{{type.id}}" aria-selected="true"><strong>{{type.name}}</strong></a>
+        </li>
+        {% else %}
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="{type.name}}-tab" data-toggle="tab" href="#service1{{type.id}}" role="tab" aria-controls="service{{type.id}}" aria-selected="false"><strong>{{type.name}}</strong></a>
+        </li>
+        {% endif %} {% endif %} {% endfor %}
+    </ul>
+    <div class="tab-content text-white" id="myTabContent">
+        {% for type in types %} {% if type.visible %} {% if type.first %}
+        <div class="tab-pane fade show active" id="service1{{type.id}}" role="tabpanel" aria-labelledby="{{type.name}}-tab">
+            <div class="row" style="padding: 2%;">
+                {% for service in services%} {% if service.type.name == type.name %}
+                <div class="card" style="color: black;padding: 2%;width: 20%;">
+                    <h5>{{service.name}}</h5><br>
+                    <div class="border border-warning rounded text-center"><br>
+                        <h6>Starting</h6>
+                        <h2>₹{{service.price}}</h2>
+                        <p><small>{{service.tag}}</small></p>
+                    </div><br>
+                    <p class="card-text" style="text-align: left;">{{service.description}}</p><br>
+                    <div class="border border-warning rounded text-center">
+                        <a href="service/{{service.id}}">View More</a>
+                    </div><br>
+                </div>
+                <div style="padding: 10px;"></div>
+                <div style="padding: 10px;"></div> {% endif %}{% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <div class="tab-pane fade" id="service1{{type.id}}" role="tabpanel" aria-labelledby="{{type.name}}-tab">
+            <div class="row" style="padding: 2%;">
+                {% for service in services%} {% if service.type.name == type.name %}
+                <div class="card" style="color: black;padding: 2%;width: 20%;">
+                    <h5>{{service.name}}</h5><br>
+                    <div class="border border-warning rounded text-center"><br>
+                        <h6>Starting</h6>
+                        <h2>₹{{service.price}}</h2>
+                        <p><small>{{service.tag}}</small></p>
+                    </div><br>
+                    <p class="card-text" style="text-align: left;">{{service.description}}</p><br>
+                    <div class="border border-warning rounded text-center">
+                        <a href="service/{{service.id}}">View More</a>
+                    </div><br>
+                </div>
+                <div style="padding: 10px;"></div>
+                <div style="padding: 10px;"></div> {% endif %}{% endfor %}
+            </div>
+        </div>
+        {% endif %} {% endif %} {% endfor %}
+    </div>
+</div><br>
+<hr><br>
+
+<div class="row " style="width: 100vw;">
+    <div class="col frame2">
+        <div>
+            <h4> Reasons Why Our Customers <span></span> Us!</h4>
+        </div>
+        <div class="benefit-container">
+            <div class="benefit">
+                <div class="b-image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/search.svg" alt="" width="38px" height="auto" class="" src="https://a.vakilsearch.com/live-images/website_revamp/search.svg"></div>
+                <h7><b>Vibrant Team</b></h7>
+                <p>A talented workforce that works in collaboration with a network of over hundreds Professionals</p>
+            </div>
+            <div class="benefit">
+                <div class="b-image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/truley-digital.svg" alt="" width="60px" height="auto" class="" src="https://a.vakilsearch.com/live-images/website_revamp/truley-digital.svg"></div>
+                <h7><b>24/7 Support</b></h7>
+                <p>Get support through phone, email, or live chat - 24/7, 365 days.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="b-image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/fast.svg" alt="" width="60px" height="auto" class="" src="https://a.vakilsearch.com/live-images/website_revamp/fast.svg"></div>
+                <h7><b>EMI Payment</b></h7>
+                <p>Easily pay online with EMI payments, credit or debit card, net banking, PayPal and more.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="b-image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/affordable.svg" alt="" width="50px" height="auto" class="" src="https://a.vakilsearch.com/live-images/website_revamp/affordable.svg"></div>
+                <h7><b>Online Ease Local Reach</b></h7>
+                <p>Easy Online process with 100+ offline store.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="b-image "><img data-src="httkilsearch.com/live-images/website_revamp/300-services.svg" alt="" width="50px" height="auto" class="" src="https://a.vakilsearch.com/live-images/website_revamp/300-services.svg"></div>
+                <h7><b>100% Legal</b></h7>
+                <p>No 3rd party involved and 100% certified documents</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--======================================================================================================================================================================================================COMMENTS-SECTION=============================================-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        {% for review in reviews %} {% if review.first %}
+        <div class="carousel-item active ">
+            <div class="comments d-block  col-11 h-50 col-sm-6 h-sm-50  mx-auto">
+                <div id="cmnt1">
+                    <h3>{{review.subject}}</h3>
+                    <hr>
+                    <div class="message">
+                        <p>
+                            {{review.body}}
+                        </p>
+                    </div>
+                    <h5 style="text-align: right;">-{{review.author}}</h5>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="carousel-item">
+            <div class="comments d-block  col-11 h-50 col-sm-6 h-sm-50  mx-auto">
+                <div id="cmnt1">
+                    <h3>{{review.subject}}</h3>
+                    <hr>
+                    <div class="message">
+                        <p>
+                            {{review.body}}
+                        </p>
+                    </div>
+                    <h5 style="text-align: right;">-{{review.author}}</h5>
+                </div>
+            </div>
+        </div>
+        {% endif %} {% endfor %}
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="fas fa-arrow-circle-left yellow icon-4x " aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="fas fa-arrow-circle-right icon-4x yellow " aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <div class="row">
+        <div class="col frame4">
+            <div>
+                <h4><strong>We've got the world talking about us</strong></h4>
+            </div>
+            <div class="company-container">
+                {% for talker in talkers %}
+                <div class="c-image">
+                    <a href="{{talker.link}}"><img style="width: 50%;" src="{{talker.image.url}}" alt=""></a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div><br><br>
+
+
+
+    <div class="container bg-dark text-dark">
+        <h2 class="text-center text-white" style="padding: 1% 0 0 0">Adding Tailwinds to our journey</h2>
+        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+            {% for help in helps %} {% if help.first %}
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="{{help.type}}-tab" data-toggle="tab" href="#menu1{{help.id}}" role="tab" aria-controls="menu{{help.id}}" aria-selected="true"><strong>{{help.type}}</strong></a>
+            </li>
+            {% else %}
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="{{help.type}}-tab" data-toggle="tab" href="#menu1{{help.id}}" role="tab" aria-controls="menu{{help.id}}" aria-selected="false"><strong>{{help.type}}</strong></a>
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+        <div class="tab-content text-white" id="myTabContent">
+            {% for help in helps %} {% if help.first %}
+            <div class="tab-pane fade show active" id="menu1{{help.id}}" role="tabpanel" aria-labelledby="{{help.type}}-tab">
+                <div class="row" style="padding: 2%;">
+                    {% for helper in helpers%} {% if help.type == helper.type.type %}
+                    <div class="card" style="width: 20%;">
+                        <img src="{{helper.image.url}}" alt="Avatar" style="width:100%"><br>
+                        <div class="container" style="color: black;">
+                            <h4><b>{{helper.name}}</b></h4>
+                            <p>{{helper.desc}}</p>
+                        </div>
+                    </div>
+                    <div style="padding: 10px;"></div> {% endif %}{% endfor %}
+                </div>
+            </div>
+            {% else %}
+            <div class="tab-pane fade" id="menu1{{help.id}}" role="tabpanel" aria-labelledby="{{help.type}}-tab">
+                <div class="row" style="padding: 2%;">
+                    {% for helper in helpers%} {% if help.type == helper.type.type %}
+                    <div class="card" style="width: 20%;">
+                        <img src="{{helper.image.url}}" alt="Avatar" style="width:100%"><br>
+                        <div class="container" style="color: black;">
+                            <h4><b>{{helper.name}}</b></h4>
+                            <p>{{helper.desc}}</p>
+                        </div>
+                    </div>
+                    <div style="padding: 10px;"></div> {% endif %}{% endfor %}
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+    <br><br> {% endblock %}

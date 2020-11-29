@@ -1,0 +1,19 @@
+{% extends 'main.html' %} {% block content %}
+<br><br><br>
+<h2>{{parent_type}}</h2>
+<hr> {% for type in types %}
+<div class="gallery">
+    <h5>{{type}}</h5><br>
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        {% for product in products%} {% if product.type.name == type.name %}
+        <div style="text-align: center;" class="col-md-6">
+            <img style="width: 100%;" src="{{product.image.url}}" class="pics-no-fade">
+            <h5><strong>{{product}}</strong></h5>
+        </div>
+        <div class="col-md-6">
+            <p><strong>{{product.description}}</strong></p>
+            <a class="btn btn-success" href="/service/{{product.id}}">View All</a>
+        </div><br> {% endif %}{% endfor %}
+    </div>
+</div>
+{% endfor %}{% endblock %}

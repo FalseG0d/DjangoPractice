@@ -1,0 +1,15 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<div class="container" style="padding: 8%;">
+    <h1>Legal24By7 Help Forum</h1>
+    <div class="container"><br><br>
+        <div class="col">
+            {% for type in types %}
+            <h3>{{type.name}}</h3>
+            {% for help in helps %} {% if help.type_of.name == type.name %}
+            <h4>{{help.name}}</h4>
+            <p>{{help.body}}</p>
+            {% endif %} {% endfor %} {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

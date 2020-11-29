@@ -1,0 +1,138 @@
+{% extends 'main.html' %} {% load static %} {% block content %}<br><br>
+<hr>
+<div class="container-fluid">
+    <div class="row m-4">
+        <div class="col-sm-6">
+            <h1>
+                {{product.name}}
+            </h1>
+            <p>
+                {{product.description}}
+            </p>
+            <div>
+                <div class="row m-3 p-3" style="padding: 12%;">
+                    <br>
+                    <div class="col-md-3 align-content-center bg-light">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <p style="text-align: center;"><strong class="font-weight-bold">{{count}} Customers Served</strong></p>
+
+                    </div>
+                    <div class="col-md-3 align-content-center bg-light">
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <p><strong class="font-weight-bold">Amazing Service</strong></p>
+
+                    </div>
+                    <div class="col-md-3 align-content-center bg-light">
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>
+
+                        <p><strong class="font-weight-bold">Customer Friendly</strong></p>
+                    </div>
+
+                    <div class="col-md-3 align-content-center bg-light">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <p><strong class="font-weight-bold">₹{{product.price}}</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="container">
+                    <div class="card-block">
+                        <!--Body-->
+
+
+                        <div class="row" style="padding: 5%;">
+                            <div class="container">
+                                <h1>End Your Legal Problems</h1>
+                                <hr>
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %} {% for field in form%}{{field.label}}:<br> {{field}}<br><br> {% endfor %}
+                                    <input class="btn btn-success" type="submit" name="sumbit" id="submit">
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="solid border-dark">
+</div>
+<div class="container" id="#header">
+    <h2 class="header text-center">How {{product.name}} can be registered ?</h2>
+    <p class="text-center">{{product.name}} is a simple service and can be done online with Legal24by7 in simple steps:</p>
+
+    <hr class="solid border-dark">
+</div>
+<div class="container-fluid" id="content">
+    <div class="row h-100 mt-5">
+        <aside class="col-md-3">
+            <div class="mt-5 mb-3" id="sidemenu">
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" target="blank" href="{{product.requirenment.url}}">Documents Required</a> {% for type in types %}
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">{{type.name}}</a> {% endfor %}
+                </div>
+            </div>
+        </aside>
+        <main class="col-md-6 py-5" style="max-height: 650px;overflow-y:scroll;">
+
+            <p>Click <a class="btn btn-success" href="{{product.requirenment.url}}" target="blank">View</a> in case PDF is not visible.</p><br><br>
+            <iframe width="100%" height="80%" src="{{product.requirenment.url}}" frameborder="0" allowfullscreen></iframe><br>
+
+        </main>
+        <div class="col-sm-3 " style="margin-top: 10%; ">
+            <div class="card " style="padding: 5%; ">
+                <div class="card-block ">
+
+                    <!--Header-->
+                    <div class="text-center ">
+                        <h3>Get me more details</h3>
+                        <hr class="mt-2 mb-2 ">
+                    </div>
+
+                    <!--Body-->
+                    <form action="{% url 'email' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="md-form ">
+                            <input type="email" id="email" name="email" placeholder="Your Email" class="form-control ">
+                        </div>
+                        <div class="md-form ">
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="form-control ">
+                        </div>
+                        <div class="md-form ">
+                            <input type="number" id="mobile" name="mobile" placeholder="Your Contact" class="form-control ">
+                        </div>
+                        <div class="md-form ">
+                            <input type="text" id="subject" name="subject" placeholder="Your Query" class="form-control ">
+                        </div>
+                        <div class="md-form ">
+                            <input type="email" id="body" name="body" placeholder="Your Message" class="form-control ">
+                        </div>
+
+                        <div class="md-form">
+                            <input class="btn btn-default" type="submit" value="Mail">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row " style="width: 100vw; ">
+        <div class="col frame3 ">
+            <div>
+                <h2>Testimonials</h2>
+            </div><br> {% for testimonial in testimonials %}
+            <div class="testimonial border border-warning rounded text-center " style="width: 97%; "><br>
+                <img src="{{testimonial.image.url}} " style="width: 80%; "><br><br>
+                <h3><strong>{{testimonial.author}}:   {{testimonial.company}}</strong></h3><br>
+                <p>{{testimonial.body}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div><br><br> {% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'home/main.html' %} {% block content %}
+
+<h1>Request Form</h1>
+
+<form action="" enctype="multipart/form-data" method="POST">
+    {% csrf_token %} {{form}}
+    <input type="submit" name="submit">
+</form>
+{% endblock %}

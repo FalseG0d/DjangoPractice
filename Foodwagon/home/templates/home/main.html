@@ -1,0 +1,659 @@
+{% load static %}
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/sub-index.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body id="body1">
+    <div class="container-fluid">
+        <div class="row-1">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; ">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'images/logo.jpg' %}" width="100" height="30" alt="" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Start Your Business
+                                </a>
+                            <ul class="dropdown-menu multi-column columns-2">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Business Registration</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item">Private Limited Company</a></li>
+                                            <li><a class="dropdown-item" href="#">Limited Liability Partnership</a></li>
+                                            <li><a class="dropdown-item" href="#">One Person Company</a></li>
+                                            <li><a class="dropdown-item" href="#">Nidhi Company</a></li>
+                                            <li><a class="dropdown-item" href="#">Producer Company</a></li>
+                                            <li><a class="dropdown-item" href="#">Partnership Firm</a></li>
+                                            <li><a class="dropdown-item" href="#">Sole Proprietorship</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Licenses</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">FSSAI[Food License]</a></li>
+                                            <li><a class="dropdown-item" href="#">IEC[Import/ExportCode]</a></li>
+                                            <li><a class="dropdown-item" href="#">APEDA-RCMC REgistration</a></li>
+                                            <li><a class="dropdown-item" href="#">MSME/SSI Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">ISO Certification</a></li>
+                                            <li><a class="dropdown-item" href="#">Digital Signature Certificate</a></li>
+                                            <li><a class="dropdown-item" href="#">PSARA License</a></li>
+                                            <li><a class="dropdown-item" href="#">OSP License</a></li>
+                                            <li><a class="dropdown-item" href="#">Trade License</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Company Name Search</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Company Name Search</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">International Business Setup</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">US Incoporation</a></li>
+                                            <li><a class="dropdown-item" href="#">Singapore Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">UK Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">Netherlands Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">Hong Kong Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">Malaysia Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">China Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">Dubai Incorporation</a></li>
+                                            <li><a class="dropdown-item" href="#">Australia Incorporation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tax &amp; Compliance
+                                </a>
+                            <ul class="dropdown-menu multi-column columns-3">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Corporate Compliance</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li>
+                                                <h1 class="dropdown-header">Mandatory Annual Filings</h1>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Private Limited Company/OPC</a></li>
+                                            <li><a class="dropdown-item" href="#">Limited Liability Partnership</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Changes In Pvt Ltd Company</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Add a Director</a></li>
+                                            <li><a class="dropdown-item" href="#">Remove a Director</a></li>
+                                            <li><a class="dropdown-item" href="#">Increase Authorized Capital</a></li>
+                                            <li><a class="dropdown-item" href="#">Close the Pvt Ltd Company</a></li>
+                                            <li><a class="dropdown-item" href="#">Change Address</a></li>
+                                            <li><a class="dropdown-item" href="#">Change Company Name</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Labour Compliance</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Provident Fund(PF) Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">ESI Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Professional Tax Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Shops and Establishment License</a></li>
+                                            <li><a class="dropdown-item" href="#">Employee Stock Option Plan[ESOP]</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Accounting &amp; Tax</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Accounting and Book-keeping</a></li>
+                                            <li><a class="dropdown-item" href="#">Payroll Maintenance</a></li>
+                                            <li><a class="dropdown-item" href="#">TDS Return Filing</a></li>
+                                            <li><a class="dropdown-item" href="#">Individual Income Tax Filing</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">GST</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">GST Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">GST Filing</a></li>
+                                            <li><a class="dropdown-item" href="#">GST Advisory</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Changes in Limited Liability Partnership</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Add Designated Partner</a></li>
+                                            <li><a class="dropdown-item" href="#">Changes to LLP Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Close the LLP</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Convert Your Business</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Proprietorship to Pvt Ltd Company</a></li>
+                                            <li><a class="dropdown-item" href="#">Compliance Check - Secretarial Audit</a></li>
+                                            <li><a class="dropdown-item" href="#">Due Diligence</a></li>
+                                            <li><a class="dropdown-item" href="#">RBI Compliance</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Trademark &amp; IP
+                                </a>
+                            <ul class="dropdown-menu multi-column columns-2">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Trademark</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Trademark Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Search for Trademark</a></li>
+                                            <li><a class="dropdown-item" href="#">Respond to TM Objection</a></li>
+                                            <li><a class="dropdown-item" href="#">USA Trademark</a></li>
+                                            <li><a class="dropdown-item" href="#">Logo Design</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Copyright</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Copyright Registration</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Patent</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Patent Search</a></li>
+                                            <li><a class="dropdown-item" href="#">Provisional Application</a></li>
+                                            <li><a class="dropdown-item" href="#">Permanent Patent</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Fundraising
+                                </a>
+                            <ul class="dropdown-menu multi-column">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Fundraising</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Fundraising</a></li>
+                                            <li><a class="dropdown-item" href="#">Pitch Deck</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Legal</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Share Purchase Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Shareholders' Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Term Sheet Review</a></li>
+                                            <li><a class="dropdown-item" href="#">Founders Agreement</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Contracts
+                                </a>
+                            <ul class="dropdown-menu multi-column columns-2 dropdown-menu-right">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Hiring Documents</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Employment Contract</a></li>
+                                            <li><a class="dropdown-item" href="#">Consultancy Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Freelancer Agreement</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Website Policies</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Terms of Service &amp; Privacy Policy</a></li>
+                                            <li><a class="dropdown-item" href="#">Disclaimer</a></li>
+                                            <li><a class="dropdown-item" href="#">Joint Venture Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">General Data Protection Regulation[GDPR]</a></li>
+                                            <li><a class="dropdown-item" href="#">Non Disclosure Agreement</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Business Contracts</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Memorandum of Understanding</a></li>
+                                            <li><a class="dropdown-item" href="#">Franchise Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Joint Venture Agreement</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Service/Vendor</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Service Level Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Master Service Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Vendor Agreement</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Legal Notice</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Legal Notice</a></li>
+                                            <li><a class="dropdown-item" href="#">Cheque Bounce Notice</a></li>
+                                            <li><a class="dropdown-item" href="#">Money Recovery</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    NGO
+                                </a>
+                            <ul class="dropdown-menu multi-column">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Registration</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">NGO</a></li>
+                                            <li><a class="dropdown-item" href="#">Section 8</a></li>
+                                            <li><a class="dropdown-item" href="#">Trust Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Society Registration</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Maintanence</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Section 8 Compliance</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Property &amp; Personal
+                                </a>
+                            <ul class="dropdown-menu multi-column columns-2 dropdown-menu-right">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Property</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Property Title Verification</a></li>
+                                            <li><a class="dropdown-item" href="#">Property Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Succession Certificate</a></li>
+                                            <li><a class="dropdown-item" href="#">Legal Heir Certificate</a></li>
+                                            <li><a class="dropdown-item" href="#">Will Drafting &amp; Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Sale Deed</a></li>
+                                            <li><a class="dropdown-item" href="#">Gift Deed</a></li>
+                                            <li><a class="dropdown-item" href="#">Residential Rental Agreement</a></li>
+                                            <li><a class="dropdown-item" href="#">Relinquishment Deed</a></li>
+                                            <li><a class="dropdown-item" href="#">Will Probate</a></li>
+                                            <li><a class="dropdown-item" href="#">RERA Complaint</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Name Change &amp; Other Correction</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Name Change</a></li>
+                                            <li><a class="dropdown-item" href="#">Religion Change</a></li>
+                                            <li><a class="dropdown-item" href="#">Gender Change</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Divorce</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Mutual Consent Divorce</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="multi-column-dropdown">
+                                            <li>
+                                                <h1 class="dropdown-header">Legal Disputes</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Consumer Complaints</a></li>
+                                            <li><a class="dropdown-item" href="#">Legal Notice</a></li>
+                                            <li><a class="dropdown-item" href="#">Public Interest Litigation[PIL]</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Marriage</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Marriage Registration</a></li>
+                                            <li><a class="dropdown-item" href="#">Court Marriage</a></li>
+                                            <li>
+                                                <h1 class="dropdown-header">Immigration</h1>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Corporate immigration</a></li>
+                                            <li><a class="dropdown-item" href="#">Family immigration</a></li>
+                                            <li><a class="dropdown-item" href="#">College immigration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-md-auto">
+                        {% if request.user.is_authenticated %}
+                        <li>
+                            Hello, {{request.user}} <a href="{% url 'logout' %}">Logging out</a> so soon?
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="{% url 'login' %}">Login</a>
+                        </li>/
+                        <li>
+                            <a href="{% url 'register' %}">Register</a>
+                        </li>
+                        {% endif %}
+                        <!--<li>
+                            <a href="https://wa.me/917406140352?text=Hello%20Legal24By7" class="fa fa-whatsapp nav-link"></a>
+                        </li>
+                        <li><a href="https://wa.me/917406140352?text=Hello%20Legal24By7" class="nav-link">+91 74061 40352</a></li>-->
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!------------------------------------------------------------------END OF NAV BAR--------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+    {% block content %} {% endblock %}
+
+
+
+
+    <!------------------------------------FOOTER---------------------------------->
+    <div class="footer-container ">
+        <a class="navbar-brand1" href="/" style="display: inline-block;">
+            <img src="{% static 'images/logo.jpg' %}" width="150" height="40" alt="" loading="lazy">
+        </a>
+        <div id="line12"></div>
+
+
+        <div class="footer-4">
+
+            <h7>24by7: Legal Information for Indian businesses</h7>
+            <p>Since 2011, ​24by7 has been a one-stop solution for any business or entrepreneur looking for a lawyer, chartered accountant or company secretary. We have been particularly instrumental in ensuring startups are fully compliant with India's
+                labyrinthine legal system. Over the past five years, the depth of our offerings, connection with reliable professionals, affordable prices and customer satisfaction has made us the largest online facilitator of legal services in India.
+                We have already served over 120,000 customers and have a steadily growing network of over 1000 professionals from all the major cities (particularly the metros of Mumbai, Bangalore, Chennai, Delhi and Kolkata) on our online platform. In
+                2016, we launched <a href="#" style="color: #436aee!important;">Libra</a>, a law practice management software, for legal professionals across India.</p>
+
+            <h7>Starting a Business</h7>
+            <p>Many founders are confused about what kind of entity to register when they start their business. Should it be a private limited company, <a href="#" style="color: #436aee!important;">limited liability partnership</a>, partnership firm, one
+                person company or a sole proprietorship. Each of these has very specific advantages and disadvantages. There is no one type for all businesses. A private limited company registration, for example, would be a good fit for any venture that
+                will look for funding at a later stage. You can contact 24by7 for all the advice you need. We assure you of great service at a reasonable price. You can find a <a href="#" style="color: #436aee!important;">company name availability here.</a></p>
+
+            <h7>Intellectual Property</h7>
+            <p>In modern business, there is no other asset as valuable as intellectual property, and yet so many startups end up neglecting it. But this is surely not advisable, as trademarks, copyrights and patents ensure that you have sole rights to your
+                creation, be it your brand, your designs or your inventions. At 24by7, we are well equipped to handle all your IP requirements. We facilitate <a href="#" style="color: #436aee!important;">trademark applications</a> in just three days,
+                <a href="#" style="color: #436aee!important;">copyright registration</a> for all your software, pictures, audio and video content, and can connect you to patent attorneys to conduct a patent search and file your patent applications. You
+                can find a <a href="#" style="color: #436aee!important;">Trademark availability here.</a></p>
+
+            <h7>Government Registrations</h7>
+            <p>In India, you need a license for everything in business. Started a manufacturing business? You need a <a href="#" style="color: #436aee!important;">GST Registration </a>and a <a href="#" style="color: #436aee!important;">Trade License.</a>                For a food business, you need an <a href="#" style="color: #436aee!important;">FSSAI license.</a> Have employees? You need a Professional Tax registration and Shops & Establishments Act Registration. If that's not enough, you also need
+                to file GST Returns and Professional Tax Returns.</p>
+
+            <h7>Legal Documentation</h7>
+            <p>The worst way to approach business is to just get into new partnerships and arenas without examining consequences. By getting a lawyer to draft contracts or agreements with new vendors, employees and investors, you're ensuring that you have
+                all the downsides covered. At Vakilsearch, we connect you to lawyers who will deliver complex documents, from <a href="#" style="color: #436aee!important;">shareholders' agreements </a>and founders' agreements to terms of service/privacy
+                policy and non-disclosure agreements, at a reasonable cost in a few days' time. Well-known startups, such as Holachef and Big Basket, have chosen to connect with a lawyer through us for their documentation work.</p>
+
+            <h7>Mandatory Compliance</h7>
+            <p>It's not enough to have <a href="#" style="color: #436aee!important;">started a private limited company</a> or an LLP. You need to comply with all the requirements of the Ministry of Corporate Affairs and Income Tax Act once you do. You need
+                to inform them of every relevant change you make, whether it is adding a director, removing a partner or increasing authorised share capital. You also need to file annual returns and maintain your accounts. In the case of a private limited
+                company, you even need them audited. At Vakilsearch, we facilitate all these services completely online. Which means you can engage a professional on retainer for the year and we'll ensure that all the formalities are completed for you
+                while you focus on your business.</p>
+
+            <h7>Libra for Lawyers</h7>
+            <p>The legal fraternity in India comprises largely independent lawyers and small law firms with under five partners. Such practices have a difficult time managing their practices efficiently. Our<a href="#" style="color: #436aee!important;"> law practice management software </a>Libra
+                is, therefore, a game-changer, as it will enable lawyers to single-handedly manage their practice. It gives them 24-hour access (on mobile and desktop) to their clients, cases, schedule, bill payments and even nation-wide judgements.
+                <a href="#" style="color: #436aee!important;">Software for lawyer's offices</a> will have a huge impact on any area of the practice.</p>
+        </div>
+        <div id="line1"></div>
+        <div class="footer-5">
+            <img data-src="https://a.vakilsearch.com/live-images/website_revamp/paymentmode-new.png" alt="Payment gateways supported by VakilSearch" width="100%" height="auto" src="https://a.vakilsearch.com/live-images/website_revamp/paymentmode-new.png">
+
+        </div>
+        <div id="line1"></div>
+        <div class="footer-1">
+            <div class="footer-1-a">
+                <ul>
+                    <li>
+                        <p>Start A Business</p>
+                    </li>
+                    <li><a>Private Limited Company</a></li>
+                    <li><a>Limited Liability Partnership</a></li>
+                    <li><a>One Person Company</a></li>
+                    <li><a>Partnership Firm</a></li>
+                    <li><a>Proprietorship Firm</a></li>
+                </ul>
+            </div>
+            <div class="footer-1-a">
+                <ul>
+                    <li>
+                        <p>Trademark & Copyright</p>
+                    </li>
+                    <li><a>Trademark Registration</a></li>
+                    <li><a>Trademark Objection</a></li>
+                    <li><a>Trademark Assignment</a></li>
+                    <li><a>Trademark Renewal</a></li>
+                    <li><a>Copyright Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer-1-a">
+                <ul>
+                    <li>
+                        <p>Govt & Tax Registration</p>
+                    </li>
+                    <li><a>GST Registration</a></li>
+                    <li><a>TDS Return</a></li>
+                    <li><a>Importer Exporter Code</a></li>
+                    <li><a>Professional Tax Registration</a></li>
+                    <li><a>Shops & Establishments Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer-1-a">
+                <ul>
+                    <li>
+                        <p>Legal Documentation</p>
+                    </li>
+                    <li><a>Non-Disclosure Agreement</a></li>
+                    <li><a>Founders' Agreement</a></li>
+                    <li><a>Term Sheet</a></li>
+                    <li><a>Shareholders' Agreement  </a></li>
+                    <li><a>Share Purchase Agreement</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="line1"></div>
+        <div class="footer-3">
+
+            <ul class="footer-3-a">
+                <li><a>About Us</a></li>
+                <li><a>Media</a></li>
+                <li><a>Press Release</a></li>
+                <li><a>Contact Us</a></li>
+                <li><a>Partner with us</a></li>
+                <li><a>Satisfaction Guarantee</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Sitemap</a></li>
+
+
+                <li>
+                    <ul class="footer-3-a" style="margin-left: 30px;">
+                        <li>
+                            <a class="fa fa-facebook" style="background: transparent;"> </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter" style="background: transparent;"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-youtube"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-linkedin"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-instagram" style="background: transparent;"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="line1"></div>
+
+        <div class="footer-6">
+            <p>By continuing past this page, you agree to our <a href="#" style="color: #436aee!important;">Terms of Service, Cookie Policy, Privacy Policy</a>, Refund Policy and Content Policies. © 2017 - Uber9 Business Process Services Private Limited.
+                All rights reserved.</p>
+            <p>Please note that we are a facilitating platform enabling access to reliable professionals. We are not a law firm and do not provide legal services ourselves. The information on this website is for the purpose of knowledge only and should not
+                be relied upon as legal advice or opinion.</p>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        /*===============================================================================================================FOR FORM OPENING AND CLOSING=================================*/
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+        /*===============================================================================================================FOR OPENING DIFFERENT PAGES=================================*/
+        $(document).ready(function() {
+            $("#BusinessRegistration").click(function() {
+                $('#body1').html('');
+            });
+        });
+        /*===========================================================================RANDOM COLOURS==========*/
+    </script>
+
+</body>
+
+</html>

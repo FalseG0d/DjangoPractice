@@ -1,0 +1,229 @@
+{% load static %}
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <nav class="vs-navbar whitenavbar navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="flexwrap removepadding container-fluid">
+            <a href="/" class="navbar-brand"><img class="headerlogo_img" width="151" height="28" alt="Header" src="{% static 'images/logo.jpg' %}"></a><button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button>
+            <div class="flexdivnav navbar-collapse collapse" id="basic-navbar-nav">
+                <div class="ml-auto animatedtransition left navbardivslide1 toggleanimateclass navbar-nav">
+                    {% for parent in parent_types %}
+                    <div aria-label="Basic example" role="group" class="treeHost removevertical webheader  btn-group"><a class="nav-link navlinkhover" style="color: white;" href="/service/type/{{parent.id}}">{{parent.name}}<span></span></a>
+
+                    </div>
+                    {% endfor %}
+                    <a rel="noreferrer" class="webClick whatsapp-num" href="https://web.whatsapp.com/send?phone=+91 7452922409&amp;text=Hello Legal24By7!" target="_blank"> <img data-src="https://assets.vakilsearch.com/live-images/website_revamp/whatsapp.png" alt="whatsapp icon" class="img-responsive" src="https://assets.vakilsearch.com/live-images/website_revamp/whatsapp.png">
+                        <!-- -->&nbsp;WhatsApp Us</a>
+                    {% if request.user.is_authenticated %}
+                    <!--<a style="width: 12%;padding: 0%;float: right;" href="{% url 'cart' %}" class="navbar_menu_item_list"><img style="width: 40%;padding: 0%;" src="{% static 'images/cart.png' %}" alt=""></a>-->
+                    <a href="{% url 'logout' %}" class="navbar_menu_item_list">Logout</a> {% else %}
+                    <a href="{% url 'login' %}" class="navbar_menu_item_list">Login</a> {% endif %}
+                </div>
+            </div>
+            <a style="width: 12%;padding: 0%;float: right;" href="{% url 'cart' %}" class="navbar-brand"><img style="width: 30%;padding: 0%;" src="{% static 'images/cart.png' %}" alt=""></a>
+        </div>
+    </nav>
+    <div class="container">
+        <hr><br><br><br>
+        <hr>
+    </div>
+
+
+    <!------------------------------------------------------------------END OF NAV BAR--------------------------------------------------------------------------------------------------------------------------------->
+    {% block content %} {% endblock %}
+
+    <!------------------------------------FOOTER---------------------------------->
+    <div class="footer-container ">
+        <a class="navbar-brand1 " href="# " style="display: inline-block; ">
+            <img src="{% static '/images/logo.jpg' %} " width="150 " height="40 " alt=" " loading="lazy ">
+        </a>
+        <div class="line12 "></div>
+
+
+        <div class="footer-4 ">
+
+            <h7>24by7: Legal Information for Indian businesses</h7>
+            <p>Since 2011, ​24by7 has been a one-stop solution for any business or entrepreneur looking for a lawyer, chartered accountant or company secretary. We have been particularly instrumental in ensuring startups are fully compliant with India's
+                labyrinthine legal system. Over the past five years, the depth of our offerings, connection with reliable professionals, affordable prices and customer satisfaction has made us the largest online facilitator of legal services in India.
+                We have already served over 120,000 customers and have a steadily growing network of over 1000 professionals from all the major cities (particularly the metros of Mumbai, Bangalore, Chennai, Delhi and Kolkata) on our online platform. In
+                2016, we launched <a href="# " style="color: #436aee!important; ">Libra</a>, a law practice management software, for legal professionals across India.</p>
+
+            <h7>Starting a Business</h7>
+            <p>Many founders are confused about what kind of entity to register when they start their business. Should it be a private limited company, <a href="# " style="color: #436aee!important; ">limited liability partnership</a>, partnership firm, one
+                person company or a sole proprietorship. Each of these has very specific advantages and disadvantages. There is no one type for all businesses. A private limited company registration, for example, would be a good fit for any venture that
+                will look for funding at a later stage. You can contact 24by7 for all the advice you need. We assure you of great service at a reasonable price. You can find a <a href="#
+        " style="color: #436aee!important; ">company name availability here.</a></p>
+
+            <h7>Intellectual Property</h7>
+            <p>In modern business, there is no other asset as valuable as intellectual property, and yet so many startups end up neglecting it. But this is surely not advisable, as trademarks, copyrights and patents ensure that you have sole rights to your
+                creation, be it your brand, your designs or your inventions. At 24by7, we are well equipped to handle all your IP requirements. We facilitate <a href="# " style="color: #436aee!important; ">trademark applications</a> in just three days,
+                <a href="# " style="color: #436aee!important;
+        ">copyright registration</a> for all your software, pictures, audio and video content, and can connect you to patent attorneys to conduct a patent search and file your patent applications. You can find a <a href="# " style="color: #436aee!important; ">Trademark availability here.</a></p>
+
+            <h7>Government Registrations</h7>
+            <p>In India, you need a license for everything in business. Started a manufacturing business? You need a <a href="# " style="color: #436aee!important; ">GST Registration </a>and a <a href="# " style="color: #436aee!important;
+        ">Trade License.</a> For a food business, you need an <a href="# " style="color: #436aee!important; ">FSSAI license.</a> Have employees? You need a Professional Tax registration and Shops & Establishments Act Registration. If that's not enough,
+                you also need to file GST Returns and Professional Tax Returns.</p>
+
+            <h7>Legal Documentation</h7>
+            <p>The worst way to approach business is to just get into new partnerships and arenas without examining consequences. By getting a lawyer to draft contracts or agreements with new vendors, employees and investors, you're ensuring that you have
+                all the downsides covered. At Vakilsearch, we connect you to lawyers who will deliver complex documents, from <a href="# " style="color: #436aee!important; ">shareholders' agreements </a>and founders' agreements to terms of service/privacy
+                policy and non-disclosure agreements, at a reasonable cost in a few days' time. Well-known startups, such as Holachef and Big Basket, have chosen to connect with a lawyer through us for their documentation work.</p>
+
+            <h7>Mandatory Compliance</h7>
+            <p>It's not enough to have <a href="# " style="color: #436aee!important; ">started a private limited company</a> or an LLP. You need to comply with all the requirements of the Ministry of Corporate Affairs and Income Tax Act once you do. You
+                need to inform them of every relevant change you make, whether it is adding a director, removing a partner or increasing authorised share capital. You also need to file annual returns and maintain your accounts. In the case of a private
+                limited company, you even need them audited. At Vakilsearch, we facilitate all these services completely online. Which means you can engage a professional on retainer for the year and we'll ensure that all the formalities are completed
+                for you while you focus on your business.</p>
+
+            <h7>Libra for Lawyers</h7>
+            <p>The legal fraternity in India comprises largely independent lawyers and small law firms with under five partners. Such practices have a difficult time managing their practices efficiently. Our<a href="# " style="color: #436aee!important; "> law practice management software </a>Libra
+                is, therefore, a game-changer, as it will enable lawyers to single-handedly manage their practice. It gives them 24-hour access (on mobile and desktop) to their clients, cases, schedule, bill payments and even nation-wide judgements.
+                <a href="# " style="color: #436aee!important; ">Software for lawyer's offices</a> will have a huge impact on any area of the practice.</p>
+        </div>
+        <div class="line1 "></div>
+        <div class="footer-5 ">
+            <img data-src="https://a.vakilsearch.com/live-images/website_revamp/paymentmode-new.png " alt="Payment gateways supported by VakilSearch " width="100% " height="auto " src="https://a.vakilsearch.com/live-images/website_revamp/paymentmode-new.png ">
+
+        </div>
+        <div class="line1 "></div>
+        <div class="footer-1 ">
+            <div class="footer-1-a ">
+                <ul>
+                    <li>
+                        <p>Start A Business</p>
+                    </li>
+                    <li><a>Private Limited Company</a></li>
+                    <li><a>Limited Liability Partnership</a></li>
+                    <li><a>One Person Company</a></li>
+                    <li><a>Partnership Firm</a></li>
+                    <li><a>Proprietorship Firm</a></li>
+                </ul>
+            </div>
+            <div class="footer-1-a ">
+                <ul>
+                    <li>
+                        <p>Trademark & Copyright</p>
+                    </li>
+                    <li><a>Trademark Registration</a></li>
+                    <li><a>Trademark Objection</a></li>
+                    <li><a>Trademark Assignment</a></li>
+                    <li><a>Trademark Renewal</a></li>
+                    <li><a>Copyright Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer-1-a ">
+                <ul>
+                    <li>
+                        <p>Govt & Tax Registration</p>
+                    </li>
+                    <li><a>GST Registration</a></li>
+                    <li><a>TDS Return</a></li>
+                    <li><a>Importer Exporter Code</a></li>
+                    <li><a>Professional Tax Registration</a></li>
+                    <li><a>Shops & Establishments Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer-1-a ">
+                <ul>
+                    <li>
+                        <p>Legal Documentation</p>
+                    </li>
+                    <li><a>Non-Disclosure Agreement</a></li>
+                    <li><a>Founders' Agreement</a></li>
+                    <li><a>Term Sheet</a></li>
+                    <li><a>Shareholders' Agreement  </a></li>
+                    <li><a>Share Purchase Agreement</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line1 "></div>
+        <div class="footer-3 ">
+
+            <ul class="footer-3-a ">
+
+                <li><a>Press Release</a></li>
+                <li><a href="contact-us.html ">Contact Us</a></li>
+                <li><a>Partner with us</a></li>
+                <li><a href="satisfaction-gurantee.html ">Satisfaction Guarantee</a></li>
+
+
+                <li>
+                    <ul class="footer-3-a " style="margin-left: 30px; ">
+                        <li>
+                            <a class="fa fa-facebook " style="background: transparent; " href="http://facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%20%27%7C&placement=&creative=318504236063&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-360705453827%26loc_physical_ms%3D9040185%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMIgYfi_dqA6gIVgn8rCh3JsAcWEAAYASAAEgLP8PD_BwE ">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter " style="background: transparent; " href="https://twitter.com/login "></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-youtube " href="https://www.youtube.com/ "></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-linkedin " href="https://in.linkedin.com/ "></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-instagram " style="background: transparent; " href="https://www.instagram.com/ "></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="line1 "></div>
+
+        <div class="footer-6 ">
+            <p>By continuing past this page, you agree to our <a href="T&C.html " style="color: #436aee!important; ">Terms of Service, Cookie Policy, Privacy Policy</a>, Refund Policy and Content Policies. © 2017 - Uber9 Business Process Services Private
+                Limited. All rights reserved.</p>
+            <p>Please note that we are a facilitating platform enabling access to reliable professionals. We are not a law firm and do not provide legal services ourselves. The information on this website is for the purpose of knowledge only and should not
+                be relied upon as legal advice or opinion.</p>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    <script>
+        /*===============================================================================================================FOR FORM OPENING AND CLOSING=================================*/
+        function openNav() {
+            document.getElementById("myNav ").style.height = "100% ";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav ").style.height = "0% ";
+        }
+        /*===============================================================================================================FOR OPENING DIFFERENT PAGES=================================*/
+        $(document).ready(function() {
+            $("#BusinessRegistration ").click(function() {
+                $('#body1').html('');
+            });
+        });
+        /*===========================================================================RANDOM COLOURS==========*/
+    </script>
+    <script>
+        w3.slideshow(".testimonial ", 1000);
+    </script>
+
+</body>
+
+</html>
