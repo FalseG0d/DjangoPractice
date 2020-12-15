@@ -1,0 +1,178 @@
+{% load static %}
+{% static "images" as baseUrl%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Disease Reporting System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/font/font-awesome.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/font/font.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/jquery.bxslider.css' %}" media="screen" />
+</head>
+<body>
+<div class="body_wrapper">
+  <div class="center">
+    <div class="header_area">
+      <div class="logo floatleft"><a href="#"><img src="{% static 'images/logo.png' %}" alt="" /></a></div>
+      <div class="top_menu floatleft">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Subscribe</a></li>
+          <li><a href="admin">Login</a></li>
+        </ul>
+      </div>
+      <div class="social_plus_search floatright">
+        <div class="social">
+          <ul>
+            <li><a href="#" class="twitter"></a></li>
+            <li><a href="#" class="facebook"></a></li>
+            <li><a href="#" class="feed"></a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form action="#" method="post" id="search_form">
+            <input type="text" value="Search news" id="s" />
+            <input type="submit" id="searchform" value="search" />
+            <input type="hidden" value="post" name="post_type" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="main_menu_area">
+      <ul id="nav">
+        {% for newtype in newstype %}
+        <li><a href="#">{{newtype.sect}}</a>
+          <ul>
+            {% for new in news %}
+              
+                <li><a>{{new.title}}</a></li>
+              
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="slider_area">
+      <div class="slider">
+        <ul class="bxslider">
+          {% for new in news %}
+            <li><img src="{{new.image.url}}" alt="" title={{new.title}} /></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="content_area">
+      <div class="main_content floatleft">
+        {% for newtype in newstype %}
+        <div class="left_coloum floatleft">
+          <div class="single_left_coloum_wrapper">
+            <h2 class="title">{{newtype.sect}}</h2>
+            <a class="more" href="#">more</a>
+            {% for new in news %}
+            <div class="single_left_coloum floatleft"> <img src="{{new.image.url}}" alt="" />
+              <h3>{{new.title}}</h3>
+              <p>{{new.desc}}</p>
+              <a class="readmore" href="#">read more</a> </div>
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="right_coloum floatright">
+          <div class="single_right_coloum">
+            <h2 class="title">Prevention</h2>
+            <ul>
+              {% for other in others %}
+              <li>
+                <div class="single_cat_right_content">
+                  <h3>{{other.title}}</h3>
+                  <p>{{other.desc}}</p>
+                  <p class="single_cat_right_content_meta"><a href="#"><span>read more</span></a> 3 hours ago</p>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+            <a class="popular_more" href="#">more</a> 
+          </div>
+          <div class="single_right_coloum">
+            <h2 class="title">Remedy</h2>
+          {% for other in others %}
+            <div class="single_cat_right_content editorial"> <img src="{{other.image.url}}" alt="" />
+              <h3>{{other.desc}}</h3>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="sidebar floatright">
+        <div class="single_sidebar"> <img src="{% static 'images/add1.png' %}" alt="" /> </div>
+        <div class="single_sidebar">
+          <div class="news-letter">
+            <h2>Report</h2>
+            <p>Login To Report an Outbreak</p>
+            <form action="admin" method="get">
+              
+              <input type="submit" value="LOGIN" id="form-submit" />
+            </form>
+            
+          </div>
+        </div>
+        <div class="single_sidebar"> <img src="{% static 'images/add1.png' %}" alt="" /> </div>
+        <div class="single_sidebar">
+          <h2 class="title">ADD</h2>
+          <img src="{% static 'images/add2.png' %}" alt="" /> </div>
+      </div>
+    </div>
+    <div class="footer_top_area">
+      <div class="inner_footer_top"> <img src="{% static 'images/add3.png' %}" alt="" /> </div>
+    </div>
+    <div class="footer_bottom_area">
+      <div class="footer_menu">
+        <ul id="f_menu">
+          <li><a href="#">world news</a></li>
+          <li><a href="#">sports</a></li>
+          <li><a href="#">tech</a></li>
+          <li><a href="#">business</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">entertainment</a></li>
+          <li><a href="#">culture</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">classifieds</a></li>
+          <li><a href="#">blogs</a></li>
+        </ul>
+      </div>
+      <div class="copyright_text">
+        <p>Copyright &copy; 2045 The News Reporter Inc. All rights reserved | Design by <a target="_blank" rel="nofollow" href="http://www.graphicsfuel.com/2045/10/wp-magazine-theme-template-psd/">Rafi MD</a></p>
+        <p>Trade marks and images used in the design are the copyright of their respective owners and are used for demo purposes only.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="{% static 'assets/js/jquery-min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets/js/jquery.bxslider.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets/js/selectnav.min.js' %}"></script> 
+<script type="text/javascript">
+selectnav('nav', {
+    label: '-Navigation-',
+    nested: true,
+    indent: '-'
+});
+selectnav('f_menu', {
+    label: '-Navigation-',
+    nested: true,
+    indent: '-'
+});
+$('.bxslider').bxSlider({
+    mode: 'fade',
+    captions: true
+});
+</script>
+</body>
+</html>
