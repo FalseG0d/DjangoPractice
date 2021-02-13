@@ -1,0 +1,57 @@
+{% load static %}
+<!--DOCTYPE html -->
+<html>
+<head>
+<title>{% block head_title %}Django Blog{% endblock head_title %}</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel='stylesheet' href='{% static "css/base.css" %}' />
+</head>
+<body class="bg-info">
+    <div class="topnav">
+        <a class="active" href="/">Welcome, {{request.user}}</a>
+        <!--<a href="/create">Create</a>-->
+        {% if not request.user.is_superuser or not request.user.is_staff %}
+        <a href="/admin">Login</a>
+        {% endif %}
+        
+        
+        <form class="Search" method="GET" action="">
+            <input type="text" name="query" placeholder="Search Posts" value="{{request.GET.query}}"/>
+            <input type="submit" name="Search"/>
+        </form><br>
+    </div>
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+
+
+<div class='container'>
+    <div class="row" style="background-color: #fff;margin-top:25px;padding:20px;">
+        <h1 style="text-align:center  ;font-size: 250px; font-weight: 400; font-family:cursive ">Welcome,</h1><br>
+    <h1 style="text-align:center">Blogers<small>This is a special blog created by Dhruv as a one day coding challenge for development purposes.</small></h1>
+    <br><hr>
+    </div>
+</div>
+
+{% for meme in memes %}
+
+<div class='container'>
+    <div class="row" style="background-color: #fff;margin-top:25px;padding:10px;">
+        <h2>{{meme.name}}</h2>
+        <img style="width:300px" src="{{meme.image.url}}"><br>
+        <p style="float:left"><b>{{meme.pub_date}}<b></p>
+        <p style="float:right"><b>Credits:{{meme.credit}}<b></p>
+    </div>
+</div>
+
+{% endfor %}
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
