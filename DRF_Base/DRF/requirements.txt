@@ -5,7 +5,7 @@ Babel==2.9.0
 click==7.1.2
 colorama==0.4.4
 defusedxml==0.6.0
-Django==3.1.6
+Django==3.1.12
 djangorestframework==3.12.2
 dnspython==2.0.0
 email-validator==1.1.2
