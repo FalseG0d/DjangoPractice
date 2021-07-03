@@ -1,0 +1,169 @@
+{% extends 'Home/main.html' %}{% load static %} {% block content %}
+<div class="frame1-container ">
+    <div id="frame1">
+
+        <h1>
+            India's Fastest Growing Legal Company.
+        </h1>
+        <h4>
+            Be the next to join or family.
+        </h4>
+        <div class="search">
+            <span>
+                        <img data-src="https://a.vakilsearch.com/live-images/website_revamp/search-bar.svg" alt="" class="home-search-icon" src="https://a.vakilsearch.com/live-images/website_revamp/search-bar.svg">
+                    </span>
+            <input id="inputID" type="text" placeholder="Search through all our services">
+        </div>
+
+        <div class="tags-container">
+            <div id="title-tag">
+                <p>Famous : </p>
+            </div>
+            <div class="tag">
+                <p><a href="#">Company Registration</a></p>
+            </div>
+            <div class="tag">
+                <p><a href="#">GST Filing</a></p>
+            </div>
+            <div class="tag">
+                <p><a href="#">Marriage Registration</a></p>
+            </div>
+            <div class="tag">
+                <p><a href="#">Trademark</a></p>
+            </div>
+
+        </div>
+        <div class="feature-container">
+            <div class="feature">
+                <div class="image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/icon-lawyers.svg" alt="" width="40px" height="auto" class="homepage-vsleads-icons" src="https://a.vakilsearch.com/live-images/website_revamp/icon-lawyers.svg"></div>
+                <div>
+                    <div class="topic">
+                        <h7>Lawyers</h7>
+                    </div>
+                    <p>
+                        Documents, contracts and advice, done right.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/icon-ca.svg" alt="" width="40px" height="auto" class="homepage-vsleads-icons" src="https://a.vakilsearch.com/live-images/website_revamp/icon-ca.svg"></div>
+                <div>
+                    <div class="topic">
+                        <h7>Chartered Accountants</h7>
+                    </div>
+                    <p>
+                        Your books are in safe hands.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="image"><img data-src="https://a.vakilsearch.com/live-images/website_revamp/icon-cs.svg" alt="" width="40px" height="auto" class="homepage-vsleads-icons" src="https://a.vakilsearch.com/live-images/website_revamp/icon-cs.svg"></div>
+                <div>
+                    <div class="topic">
+                        <h7>Company Secretaries</h7>
+                    </div>
+                    <p>
+                        Your business' compliance checklist, completed.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="right">
+        <button id="show">Sign Up</button>
+
+        <div class="form-container">
+            <button id="hide">X</button>
+            <form class="signup" action="">
+                <h3>Create an account</h3>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="acn">Adhaar Card Number</label>
+                <input type="number" id="acn" name="dacn">
+                <br>
+                <input type="submit" value="SUBMIT">
+
+
+            </form>
+        </div>
+        <div id="ad1"><img src="{% static '/images/signupimage.jpeg'%}"></div>
+    </div>
+</div>
+
+
+<div id="line" class="row"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 company-container">
+            <h3>{{count}} Requests Registered So Far....</h3>
+
+            <div>
+                <ul id="company">
+                    <li> <img data-src="https://a.vakilsearch.com/live-images/website_revamp/oyo-rooms.svg" alt="Logo of VakilSearch premium customer UrbanClap" class="" src="https://a.vakilsearch.com/live-images/website_revamp/oyo-rooms.svg"> </li>
+                    <li>
+                        <img data-src="https://a.vakilsearch.com/live-images/website_revamp/taxi.svg" alt="Logo of VakilSearch premium customer taxi for sure" class="" src="https://a.vakilsearch.com/live-images/website_revamp/taxi.svg"> </li>
+                    <li> <img data-src="https://a.vakilsearch.com/live-images/website_revamp/bb.svg" alt="Logo of VakilSearch premium customer bigbasket" class="" src="https://a.vakilsearch.com/live-images/website_revamp/bb.svg"> </li>
+                    <li> <img data-src="https://a.vakilsearch.com/live-images/website_revamp/hdfc.svg" alt="Logo of VakilSearch premium customer hdfc" class="" src="https://a.vakilsearch.com/live-images/website_revamp/hdfc.svg"> </li>
+                    <li> <img data-src="https://a.vakilsearch.com/live-images/website_revamp/amazon-grey.svg" alt="Logo of VakilSearch premium customer amazon" class="" src="https://a.vakilsearch.com/live-images/website_revamp/amazon-grey.svg"> </li>
+                    <li>
+                        <img data-src="https://a.vakilsearch.com/live-images/website_revamp/jamb.svg" alt="Logo of VakilSearch premium customer jamboree" class="" src="https://a.vakilsearch.com/live-images/website_revamp/jamb.svg"> </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container bg-dark text-dark">
+    <h2 class="text-center text-white">Our Services</h2>
+    <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+        {% for type in types %}
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="{{type}}-tab" data-toggle="tab" href="#menu{{type.id}}" role="tab" aria-controls="menu{{type.id}}" aria-selected="false"><strong>{{type}}</strong></a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="tab-content text-white" id="myTabContent">
+        {% for type in types %}
+        <div class="tab-pane fade" id="menu{{type.id}}" role="tabpanel" aria-labelledby="{{type}}-tab">
+            <div class="row" style="padding: 2%;">
+                {% for service in services %}
+                <div class="col-sm-3">
+                    <div class="card h-100">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title text-center">Private Limited Company</h5>
+                            <div class="border border-warning rounded text-center">
+                                <h6>Starting</h6>
+                                <h2>₹6999</h2>
+                                <p><small>* All Inclusive</small></p>
+                            </div>
+                            <p class="card-text">The default option for start-ups and growing businesses as only private limited companies can raise venture capital. This type of company offers limited liability for its shareholders with certain restrictions placed on the
+                                ownership. Private limited company registration, directors may be different from shareholders.</p>
+                            <a href="#" class="btn btn-primary">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
